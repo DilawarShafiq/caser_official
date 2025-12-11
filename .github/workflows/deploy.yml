@@ -3,6 +3,7 @@ name: Deploy Frontend
 on:
   push:
     branches: [main]
+  workflow_dispatch: # Allows manual triggering
 
 jobs:
   build-and-deploy:
@@ -42,3 +43,4 @@ jobs:
         github_token: ${{ secrets.GITHUB_TOKEN }}
         publish_dir: ./frontend/dist
         publish_branch: gh-pages
+        force_orphan: true

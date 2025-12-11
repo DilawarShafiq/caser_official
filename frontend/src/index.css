@@ -1,0 +1,12 @@
+@import "tailwindcss";
+
+@theme {
+  --color-caser-navy: #1A365D;
+  --color-caser-cyan: #00B5D4;
+  --color-caser-gold: #ECC94B;
+  --color-caser-neutral-light: #F7FAFC;
+  --color-caser-neutral-dark: #2D3748;
+  
+  --font-montserrat: Montserrat, sans-serif;
+  --font-open-sans: Open Sans, sans-serif;
+}

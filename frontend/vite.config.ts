@@ -12,7 +12,7 @@ export default defineConfig({
     }),
     tailwindcss(),
   ],
-  base: '/caser_official/',  // Use repository name as base for GitHub Pages deployment
+  base: process.env.NODE_ENV === 'production' ? '/caser_official/' : '/',  // Use repository name as base for GitHub Pages deployment, root for local development
   build: {
     outDir: 'dist',
     assetsDir: 'assets',
@@ -21,11 +21,11 @@ export default defineConfig({
     rollupOptions: {
       output: {
         assetFileNames: (assetInfo) => {
-          let extType = assetInfo.name?.split('.').pop()
+          let extType = assetInfo.name ? assetInfo.name.split('.').pop() || 'asset' : 'asset'
           if (/png|jpe?g|webp|gif/i.test(extType)) {
             extType = 'img'
           }
-          return `${extType}/[name]-[hash][extname]`
+          return `${extType || 'asset'}/[name]-[hash][extname]`
         },
         chunkFileNames: 'js/[name]-[hash].js',
         entryFileNames: 'js/[name]-[hash].js',

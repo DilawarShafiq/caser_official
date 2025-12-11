@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { ChevronLeft, Target, Clock, MapPin, CheckCircle } from 'lucide-react';
+import { ChevronLeft, Target, Clock, MapPin, CheckCircle, Users } from 'lucide-react';
 import type { WhatsUpItem } from '../../data/whatsUpData';
 
 interface Props {

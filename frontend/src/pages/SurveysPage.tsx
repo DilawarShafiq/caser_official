@@ -1,14 +1,8 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { TabletSmartphone, ClipboardCheck, Map, Users, BarChart3, ShieldCheck, CheckCircle } from 'lucide-react';
+import { TabletSmartphone, ClipboardCheck, Map, Users, BarChart3, ShieldCheck } from 'lucide-react';
 
 const SurveysPage: React.FC = () => {
-  const stats = [
-    { value: "500k+", label: "Households Surveyed" },
-    { value: "99.8%", label: "Data Accuracy" },
-    { value: "350+", label: "Field Enumerators" },
-    { value: "100%", label: "Districts Reachable" },
-  ];
 
   return (
     <div className="bg-white min-h-screen">

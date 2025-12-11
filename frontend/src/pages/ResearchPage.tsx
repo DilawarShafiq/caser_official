@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { FileText, Download, ChevronRight, X, ChevronLeft, ZoomIn, ZoomOut } from 'lucide-react';
+import { FileText, Download, ChevronRight, X, ChevronLeft } from 'lucide-react';
 
 // --- Types ---
 interface Report {
@@ -176,11 +176,12 @@ const ResearchPage: React.FC = () => {
         <motion.div layout className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             <AnimatePresence>
                 {filteredPubs.map((pub, idx) => (
-                    <motion.div 
+                    <motion.div
                         layout
                         key={pub.id}
                         initial={{ opacity: 0, scale: 0.9 }}
                         animate={{ opacity: 1, scale: 1 }}
+                        transition={{ delay: idx * 0.1 }}
                         exit={{ opacity: 0, scale: 0.9 }}
                         className="bg-white border border-gray-100 rounded-xl overflow-hidden hover:shadow-xl transition-shadow group flex flex-col"
                     >

@@ -1,10 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { 
-  BarChart, Search, Lightbulb, GraduationCap, Scale, 
-  Heart, BookOpen, DollarSign, Cloud, Landmark, Users, Building, Globe, HandHelping, Laptop,
+import {
+  BarChart, Search, Lightbulb, GraduationCap, Scale,
   Activity, TrendingUp, Leaf, ChevronLeft, ChevronRight, ArrowRight
-} from 'lucide-react'; 
+} from 'lucide-react';
 
 const HomePage: React.FC = () => {
   // --- Data Definitions ---

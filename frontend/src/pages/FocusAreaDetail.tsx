@@ -30,7 +30,7 @@ const FocusAreaDetail: React.FC = () => {
             transition={{ duration: 0.8 }}
           >
             <div className="mx-auto bg-white/20 backdrop-blur-md p-4 rounded-full w-fit mb-6">
-                {React.cloneElement(data.icon as React.ReactElement, { size: 48, className: "text-white" })}
+                {React.cloneElement(data.icon as React.ReactElement<any>, { size: 48, className: "text-white" })}
             </div>
             <h1 className="text-5xl md:text-6xl lg:text-7xl font-montserrat font-bold mb-6 tracking-tight shadow-sm">
               {data.title}

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Calendar, MapPin, Clock, FileText, Video, Users } from 'lucide-react';
+import { Video, Users } from 'lucide-react';
 
 export interface WhatsUpItem {
   slug: string;

@@ -19,7 +19,7 @@ const PrivacyPolicyPage: React.FC = () => {
             {/* Intro */}
             <div>
                 <p className="text-gray-700 leading-relaxed text-lg">
-                    At the Centre for Advanced Survey and Research (CASER), we adhere to the highest ethical standards in data collection and management. This Privacy Policy outlines how we handle personal information collected through our surveys, website, and other channels.
+                    At the Center for Advanced Survey and Economic Research (CASER), we adhere to the highest ethical standards in data collection and management. This Privacy Policy outlines how we handle personal information collected through our surveys, website, and other channels.
                 </p>
                 <p className="text-sm text-gray-500 mt-4">Last Updated: December 11, 2025</p>
             </div>

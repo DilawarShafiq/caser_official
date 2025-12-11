@@ -18,7 +18,7 @@ const TermsPage: React.FC = () => {
         >
             <div>
                 <p className="text-gray-700 leading-relaxed text-lg">
-                    Welcome to the Centre for Advanced Survey and Research (CASER). By accessing our website and utilizing our resources, you agree to comply with the following terms and conditions.
+                    Welcome to the Center for Advanced Survey and Economic Research (CASER). By accessing our website and utilizing our resources, you agree to comply with the following terms and conditions.
                 </p>
                 <p className="text-sm text-gray-500 mt-4">Last Updated: December 11, 2025</p>
             </div>

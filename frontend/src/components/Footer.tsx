@@ -12,8 +12,8 @@ const Footer: React.FC = () => {
         <div className="space-y-4">
           <div className="flex flex-col items-start">
              <img src="/caser_official/caser_logo.png" alt="CASER Logo" className="h-16 mb-3" />
-             <h3 className="text-base font-montserrat font-bold whitespace-nowrap text-transparent bg-clip-text bg-gradient-to-r from-caser-gold via-white to-caser-gold">
-               Centre for Advanced Survey and Research
+             <h3 className="text-base font-montserrat font-bold whitespace-nowrap text-transparent bg-clip-text bg-gradient-to-r from-caser-gold via-white to-caser-gold animate-pulse">
+               Center for Advanced Survey and Economic Research
              </h3>
           </div>
           <p className="text-gray-300 text-sm leading-relaxed">
@@ -80,7 +80,7 @@ const Footer: React.FC = () => {
       <div className="border-t border-gray-700 pt-8 mt-8">
           <div className="container mx-auto px-4 flex flex-col md:flex-row justify-between items-center gap-6">
               <div className="text-sm text-gray-400 text-center md:text-left flex flex-col md:flex-row gap-2 md:gap-4 items-center">
-                <span>&copy; {new Date().getFullYear()} Centre for Advanced Survey and Research. All rights reserved.</span>
+                <span>&copy; {new Date().getFullYear()} Center for Advanced Survey and Economic Research. All rights reserved.</span>
                 <span className="hidden md:block text-gray-600">|</span>
                 <Link to="/privacy" className="hover:text-caser-gold transition-colors">Privacy Policy</Link>
                 <span className="hidden md:block text-gray-600">|</span>

@@ -74,8 +74,8 @@ const Header: React.FC = () => {
           <Link to="/" className="flex items-center">
             <img src="/caser_official/caser_logo.png" alt="CASER Logo" className="h-12" />
           </Link>
-          <span className="hidden lg:block font-montserrat font-bold text-lg text-transparent bg-clip-text bg-gradient-to-r from-caser-gold via-white to-caser-gold animate-pulse">
-            Centre for Advanced Survey and Research
+          <span className="hidden lg:block font-montserrat font-bold text-lg text-white">
+            Center for Advanced Survey and Economic Research
           </span>
         </div>
 

@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import {
   BarChart, Search, Lightbulb, GraduationCap, Scale,
@@ -128,18 +129,18 @@ const HomePage: React.FC = () => {
             transition={{ duration: 0.8, delay: 0.4, ease: "easeOut" }}
             className="flex flex-col sm:flex-row justify-center gap-4"
           >
-            <a
-              href="/about"
+            <Link
+              to="/about"
               className="px-8 py-3 bg-caser-gold text-caser-navy font-montserrat font-bold rounded-lg hover:bg-yellow-400 transition-colors duration-300 shadow-lg"
             >
               Learn More About Us
-            </a>
-            <a
-              href="/contact"
+            </Link>
+            <Link
+              to="/contact"
               className="px-8 py-3 border-2 border-caser-cyan text-caser-cyan font-montserrat font-bold rounded-lg hover:bg-caser-cyan hover:text-white transition-colors duration-300 shadow-lg"
             >
               Join Our Network
-            </a>
+            </Link>
           </motion.div>
         </div>
       </section>

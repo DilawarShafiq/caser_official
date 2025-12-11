@@ -12,7 +12,7 @@ export default defineConfig({
     }),
     tailwindcss(),
   ],
-  base: process.env.NODE_ENV === 'production' ? '/caser_official/' : '/',  // Use repository name as base for GitHub Pages deployment, root for local development
+  base: process.env.GITHUB_PAGES ? '/caser_official/' : '/',  // Use repository name as base for GitHub Pages deployment, root for local development
   build: {
     outDir: 'dist',
     assetsDir: 'assets',

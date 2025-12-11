@@ -1,5 +1,6 @@
 // frontend/src/components/Footer.tsx
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { Facebook, Twitter, Linkedin, Youtube, Instagram, MapPin, Mail, Phone } from 'lucide-react'; 
 
 const Footer: React.FC = () => {
@@ -10,7 +11,7 @@ const Footer: React.FC = () => {
         {/* Column 1: Branding & About */}
         <div className="space-y-4">
           <div className="flex flex-col items-start">
-             <img src="/caser_logo.png" alt="CASER Logo" className="h-16 mb-3" />
+             <img src="/caser_official/caser_logo.png" alt="CASER Logo" className="h-16 mb-3" />
              <h3 className="text-base font-montserrat font-bold whitespace-nowrap text-transparent bg-clip-text bg-gradient-to-r from-caser-gold via-white to-caser-gold">
                Centre for Advanced Survey and Research
              </h3>
@@ -27,12 +28,12 @@ const Footer: React.FC = () => {
         <div>
           <h4 className="text-xl font-montserrat font-bold text-caser-gold mb-6">Quick Links</h4>
           <ul className="space-y-3">
-             <li><a href="/about" className="hover:text-caser-cyan transition-colors duration-300">About Us</a></li>
-             <li><a href="/what-we-do" className="hover:text-caser-cyan transition-colors duration-300">Our Expertise</a></li>
-             <li><a href="/research" className="hover:text-caser-cyan transition-colors duration-300">Research</a></li>
-             <li><a href="/whats-up" className="hover:text-caser-cyan transition-colors duration-300">News & Events</a></li>
-             <li><a href="/careers" className="hover:text-caser-cyan transition-colors duration-300">Careers</a></li>
-             <li><a href="/contact" className="hover:text-caser-cyan transition-colors duration-300">Contact Us</a></li>
+             <li><Link to="/about" className="hover:text-caser-cyan transition-colors duration-300">About Us</Link></li>
+             <li><Link to="/what-we-do" className="hover:text-caser-cyan transition-colors duration-300">Our Expertise</Link></li>
+             <li><Link to="/research" className="hover:text-caser-cyan transition-colors duration-300">Research</Link></li>
+             <li><Link to="/whats-up" className="hover:text-caser-cyan transition-colors duration-300">News & Events</Link></li>
+             <li><Link to="/careers" className="hover:text-caser-cyan transition-colors duration-300">Careers</Link></li>
+             <li><Link to="/contact" className="hover:text-caser-cyan transition-colors duration-300">Contact Us</Link></li>
           </ul>
         </div>
 
@@ -81,11 +82,11 @@ const Footer: React.FC = () => {
               <div className="text-sm text-gray-400 text-center md:text-left flex flex-col md:flex-row gap-2 md:gap-4 items-center">
                 <span>&copy; {new Date().getFullYear()} Centre for Advanced Survey and Research. All rights reserved.</span>
                 <span className="hidden md:block text-gray-600">|</span>
-                <a href="/privacy" className="hover:text-caser-gold transition-colors">Privacy Policy</a>
+                <Link to="/privacy" className="hover:text-caser-gold transition-colors">Privacy Policy</Link>
                 <span className="hidden md:block text-gray-600">|</span>
-                <a href="/terms" className="hover:text-caser-gold transition-colors">Terms of Service</a>
+                <Link to="/terms" className="hover:text-caser-gold transition-colors">Terms of Service</Link>
                 <span className="hidden md:block text-gray-600">|</span>
-                <a href="/cookies" className="hover:text-caser-gold transition-colors">Cookie Policy</a>
+                <Link to="/cookies" className="hover:text-caser-gold transition-colors">Cookie Policy</Link>
               </div>
               
               <div className="flex items-center gap-4">

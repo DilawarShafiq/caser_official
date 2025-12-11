@@ -1,5 +1,6 @@
 // frontend/src/components/Header.tsx
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import { Menu, X, ChevronDown } from 'lucide-react'; // Using Lucide React for icons
 import { cn } from '../utils/cn'; // Utility for conditional classes
 
@@ -70,9 +71,9 @@ const Header: React.FC = () => {
       <div className="container mx-auto px-4 py-4 flex justify-between items-center">
         {/* Logo */}
         <div className="flex items-center gap-3">
-          <a href="/" className="flex items-center">
-            <img src="/caser_logo.png" alt="CASER Logo" className="h-12" />
-          </a>
+          <Link to="/" className="flex items-center">
+            <img src="/caser_official/caser_logo.png" alt="CASER Logo" className="h-12" />
+          </Link>
           <span className="hidden lg:block font-montserrat font-bold text-lg text-transparent bg-clip-text bg-gradient-to-r from-caser-gold via-white to-caser-gold animate-pulse">
             Centre for Advanced Survey and Research
           </span>
@@ -87,13 +88,13 @@ const Header: React.FC = () => {
               onMouseEnter={() => setActiveDropdown(item.name)}
               onMouseLeave={() => setActiveDropdown(null)}
             >
-              <a
-                href={item.href}
+              <Link
+                to={item.href}
                 className="flex items-center hover:text-caser-gold transition-colors duration-300 py-2"
               >
                 {item.name}
                 {item.subItems && <ChevronDown size={16} className="ml-1" />}
-              </a>
+              </Link>
               {/* Dropdown Menu */}
               {item.subItems && (
                 <div
@@ -107,12 +108,12 @@ const Header: React.FC = () => {
                   <ul className="py-2">
                     {item.subItems.map((subItem) => (
                       <li key={subItem.name}>
-                        <a
-                          href={subItem.href}
+                        <Link
+                          to={subItem.href}
                           className="block px-4 py-2 hover:bg-caser-neutral-light hover:text-caser-navy transition-colors text-sm"
                         >
                           {subItem.name}
-                        </a>
+                        </Link>
                       </li>
                     ))}
                   </ul>
@@ -141,9 +142,9 @@ const Header: React.FC = () => {
           {navItems.map((item) => (
             <li key={item.name} className="border-b border-caser-neutral-dark/30 last:border-0 pb-2">
               <div className="flex justify-between items-center">
-                 <a href={item.href} className="block text-white hover:text-caser-gold text-lg font-medium py-2" onClick={() => !item.subItems && setIsOpen(false)}>
+                 <Link to={item.href} className="block text-white hover:text-caser-gold text-lg font-medium py-2" onClick={() => !item.subItems && setIsOpen(false)}>
                     {item.name}
-                 </a>
+                 </Link>
                  {item.subItems && (
                      <button onClick={() => setActiveDropdown(activeDropdown === item.name ? null : item.name)} className="text-white p-2">
                         <ChevronDown size={20} className={cn("transition-transform", activeDropdown === item.name ? "rotate-180" : "")} />
@@ -159,9 +160,9 @@ const Header: React.FC = () => {
                 )}>
                   {item.subItems.map((subItem) => (
                     <li key={subItem.name}>
-                      <a href={subItem.href} className="block text-caser-neutral-light/80 hover:text-caser-gold text-sm py-1" onClick={() => setIsOpen(false)}>
+                      <Link to={subItem.href} className="block text-caser-neutral-light/80 hover:text-caser-gold text-sm py-1" onClick={() => setIsOpen(false)}>
                         {subItem.name}
-                      </a>
+                      </Link>
                     </li>
                   ))}
                 </ul>

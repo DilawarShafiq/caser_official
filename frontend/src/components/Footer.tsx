@@ -12,7 +12,7 @@ const Footer: React.FC = () => {
         <div className="space-y-4">
           <div className="flex flex-col items-start">
              <img src="/caser_official/caser_logo.png" alt="CASER Logo" className="h-16 mb-3" />
-             <h3 className="text-base font-montserrat font-bold whitespace-nowrap text-transparent bg-clip-text bg-gradient-to-r from-caser-gold via-white to-caser-gold animate-pulse">
+             <h3 className="text-sm font-montserrat font-bold text-transparent bg-clip-text bg-gradient-to-r from-caser-gold via-white to-caser-gold animate-pulse">
                Center for Advanced Survey and Economic Research
              </h3>
           </div>

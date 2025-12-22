@@ -1,0 +1,16 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(git fetch:*)",
+      "Bash(git ls-tree:*)",
+      "Bash(npm run build:*)",
+      "Bash(git add:*)",
+      "Bash(git commit -m \"$(cat <<''EOF''\nFix GitHub Pages routing and navigation issues\n\n- Add basename=\"/caser_official\" to BrowserRouter for proper routing\n- Replace all <a> tags with React Router <Link> components in Header and Footer\n- Update logo paths to include /caser_official/ base path\n- Fixes navigation not working when clicking menu items\n- Fixes logo not displaying on deployed site\n\n🤖 Generated with [Claude Code](https://claude.com/claude-code)\n\nCo-Authored-By: Claude <noreply@anthropic.com>\nEOF\n)\")",
+      "Bash(git push:*)",
+      "Bash(git commit -m \"$(cat <<''EOF''\nUpdate organization name and adjust text animations\n\n- Change \"Centre for Advanced Survey and Research\" to \"Center for Advanced Survey and Economic Research\"\n- Remove animation from header text (now plain white text)\n- Keep animation only in footer (animate-pulse gradient effect)\n- Update organization name across all pages and components\n- Update HTML title tag\n\n🤖 Generated with [Claude Code](https://claude.com/claude-code)\n\nCo-Authored-By: Claude <noreply@anthropic.com>\nEOF\n)\")",
+      "Bash(git commit:*)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}

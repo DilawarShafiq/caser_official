@@ -10,54 +10,33 @@ const navItems = [
     name: 'About Us',
     href: '/about',
     subItems: [
-      { name: 'Who We Are', href: '/about/who-we-are' },
-      { name: 'Our Team', href: '/about/team' },
-      { name: 'Partners & Collaborators', href: '/about/partners' },
+      { name: 'Who are we', href: '/about/who-we-are' },
+      { name: 'Vision, Mission & Values', href: '/about/vision' },
+      { name: 'Our Team', href: '/about/our-team' },
+      { name: 'Our Partners', href: '/about/our-partners' },
+      { name: 'Our Edge', href: '/about/our-edge' },
+      { name: 'Our Methods & Tools', href: '/about/methods' },
     ],
   },
+  { name: 'Focus Areas', href: '/focus-areas' },
+  { name: 'Publications', href: '/publications' },
   {
-    name: 'What We Do',
-    href: '/what-we-do',
+    name: 'Insights',
+    href: '/insights',
     subItems: [
-      { name: 'Data Analytics & Visualization', href: '/services/analytics' },
-      { name: 'Surveys & Field Research', href: '/services/surveys' },
-      { name: 'Policy Advisory', href: '/services/advisory' },
-      { name: 'Capacity Building & Training', href: '/services/training' },
-      { name: 'Impact Evaluation', href: '/services/impact' },
+      { name: 'News', href: '/insights/news' },
+      { name: 'Articles', href: '/insights/articles' },
+      { name: 'Stories', href: '/insights/stories' },
     ],
   },
+  { name: 'Projects', href: '/projects' },
   {
-    name: 'Focus Areas',
-    href: '/focus-areas',
+    name: 'Contact Us',
+    href: '/contact',
     subItems: [
-        { name: 'Health & Wellbeing', href: '/focus/health' },
-        { name: 'Education & Skills', href: '/focus/education' },
-        { name: 'Economy, Labour & Markets', href: '/focus/economy' },
-        { name: 'Technology & Society', href: '/focus/tech' },
-        { name: 'Climate & Environment', href: '/focus/climate' },
-        { name: 'Governance & Public Policy', href: '/focus/governance' },
-        { name: 'Gender & Social Inclusion', href: '/focus/gender' },
-        { name: 'Urban Development & Infrastructure', href: '/focus/urban' },
-        { name: 'Culture & Social Change', href: '/focus/culture' },
-        { name: 'Humanitarian & Crisis Response', href: '/focus/crisis' },
-    ]
-  },
-  {
-    name: 'Research & Pubs',
-    href: '/research',
-    subItems: [
-      { name: 'Reports', href: '/research/reports' },
-      { name: 'Policy Briefs', href: '/research/briefs' },
-      { name: 'Insight Articles', href: '/research/articles' },
-    ],
-  },
-  {
-    name: 'What’s Up',
-    href: '/whats-up',
-    subItems: [
-      { name: 'Ongoing Projects', href: '/whats-up/projects' },
-      { name: 'News & Announcements', href: '/whats-up/news' },
-      { name: 'Events', href: '/whats-up/events' },
+      { name: 'Write and talk to us', href: '/contact/write-talk' },
+      { name: 'Join as Colleague', href: '/contact/join-colleague' },
+      { name: 'Join as Partner', href: '/contact/join-partner' },
     ],
   },
 ];
@@ -67,14 +46,14 @@ const Header: React.FC = () => {
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
 
   return (
-    <header className="bg-caser-navy text-white shadow-md font-montserrat sticky top-0 z-50">
+    <header className="bg-[#E49B0F] text-[#FAF3E0] shadow-md font-montserrat sticky top-0 z-50">
       <div className="container mx-auto px-4 py-4 flex justify-between items-center">
         {/* Logo */}
         <div className="flex items-center gap-3">
           <Link to="/" className="flex items-center">
             <img src="/caser_official/caser_logo.png" alt="CASER Logo" className="h-12" />
           </Link>
-          <span className="hidden lg:block font-montserrat font-bold text-lg text-transparent bg-clip-text bg-gradient-to-r from-caser-gold via-white to-caser-gold">
+          <span className="hidden lg:block font-montserrat font-bold text-lg text-transparent bg-clip-text bg-gradient-to-r from-[#E49B0F] via-[#FAF3E0] to-[#E49B0F]">
             Center for Advanced Survey and Economic Research
           </span>
         </div>
@@ -90,7 +69,7 @@ const Header: React.FC = () => {
             >
               <Link
                 to={item.href}
-                className="flex items-center hover:text-caser-gold transition-colors duration-300 py-2"
+                className="flex items-center hover:text-[#4A6FA5] transition-colors duration-300 py-2"
               >
                 {item.name}
                 {item.subItems && <ChevronDown size={16} className="ml-1" />}
@@ -99,7 +78,7 @@ const Header: React.FC = () => {
               {item.subItems && (
                 <div
                   className={cn(
-                    "absolute left-0 top-full w-64 bg-white text-caser-neutral-dark shadow-xl rounded-md overflow-hidden transition-all duration-300 transform origin-top",
+                    "absolute left-0 top-full w-64 bg-[#FAF3E0] text-[#2B2B2B] shadow-xl rounded-md overflow-hidden transition-all duration-300 transform origin-top",
                     activeDropdown === item.name
                       ? "opacity-100 scale-y-100 translate-y-0"
                       : "opacity-0 scale-y-0 -translate-y-2 pointer-events-none"
@@ -110,7 +89,7 @@ const Header: React.FC = () => {
                       <li key={subItem.name}>
                         <Link
                           to={subItem.href}
-                          className="block px-4 py-2 hover:bg-caser-neutral-light hover:text-caser-navy transition-colors text-sm"
+                          className="block px-4 py-2 hover:bg-[#E5E5E5] hover:text-[#E49B0F] transition-colors text-sm"
                         >
                           {subItem.name}
                         </Link>
@@ -134,24 +113,24 @@ const Header: React.FC = () => {
       {/* Mobile Navigation */}
       <nav
         className={cn(
-          "lg:hidden bg-caser-navy absolute w-full left-0 z-40 transition-all duration-300 ease-in-out transform overflow-y-auto max-h-[90vh]",
+          "lg:hidden bg-[#E49B0F] absolute w-full left-0 z-40 transition-all duration-300 ease-in-out transform overflow-y-auto max-h-[90vh]",
           isOpen ? "translate-y-0 opacity-100" : "-translate-y-full opacity-0 pointer-events-none"
         )}
       >
         <ul className="flex flex-col p-4 space-y-2">
           {navItems.map((item) => (
-            <li key={item.name} className="border-b border-caser-neutral-dark/30 last:border-0 pb-2">
+            <li key={item.name} className="border-b border-[#2B2B2B]/30 last:border-0 pb-2">
               <div className="flex justify-between items-center">
-                 <Link to={item.href} className="block text-white hover:text-caser-gold text-lg font-medium py-2" onClick={() => !item.subItems && setIsOpen(false)}>
+                 <Link to={item.href} className="block text-[#FAF3E0] hover:text-[#4A6FA5] text-lg font-medium py-2" onClick={() => !item.subItems && setIsOpen(false)}>
                     {item.name}
                  </Link>
                  {item.subItems && (
-                     <button onClick={() => setActiveDropdown(activeDropdown === item.name ? null : item.name)} className="text-white p-2">
+                     <button onClick={() => setActiveDropdown(activeDropdown === item.name ? null : item.name)} className="text-[#FAF3E0] p-2">
                         <ChevronDown size={20} className={cn("transition-transform", activeDropdown === item.name ? "rotate-180" : "")} />
                      </button>
                  )}
               </div>
-              
+
               {/* Mobile Submenu */}
               {item.subItems && (
                 <ul className={cn(
@@ -160,7 +139,7 @@ const Header: React.FC = () => {
                 )}>
                   {item.subItems.map((subItem) => (
                     <li key={subItem.name}>
-                      <Link to={subItem.href} className="block text-caser-neutral-light/80 hover:text-caser-gold text-sm py-1" onClick={() => setIsOpen(false)}>
+                      <Link to={subItem.href} className="block text-[#FAF3E0]/80 hover:text-[#4A6FA5] text-sm py-1" onClick={() => setIsOpen(false)}>
                         {subItem.name}
                       </Link>
                     </li>

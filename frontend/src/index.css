@@ -3,10 +3,15 @@
 @theme {
   --color-caser-navy: #1A365D;
   --color-caser-cyan: #00B5D4;
-  --color-caser-gold: #ECC94B;
+  --color-caser-gold: #E49B0F; /* Primary (Brand): Dark Saffron */
+  --color-caser-steel-blue: #4A6FA5; /* Secondary Accent: Steel Blue */
+  --color-caser-sage-green: #6C8E6E; /* Secondary Accent: Muted Sage Green */
+  --color-caser-cream: #FAF3E0; /* Background: Warm Cream */
+  --color-caser-light-grey: #E5E5E5; /* Background: Light Grey */
+  --color-caser-charcoal: #2B2B2B; /* Text: Deep Charcoal */
   --color-caser-neutral-light: #F7FAFC;
   --color-caser-neutral-dark: #2D3748;
-  
+
   --font-montserrat: Montserrat, sans-serif;
   --font-open-sans: Open Sans, sans-serif;
 }

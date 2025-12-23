@@ -25,9 +25,6 @@ import OurPartnersPage from './pages/OurPartnersPage'; // New page for "Our Part
 import VisionMissionValuesPage from './pages/VisionMissionValuesPage'; // New page for "Vision, Mission & Values"
 import OurEdgePage from './pages/OurEdgePage'; // New page for "Our Edge"
 import OurMethodsToolsPage from './pages/OurMethodsToolsPage'; // New page for "Our Methods & Tools"
-import PublicationsPage from './pages/PublicationsPage'; // New page
-import InsightsPage from './pages/InsightsPage'; // New page
-import ProjectsPage from './pages/ProjectsPage'; // New page
 import PublicationsNewPage from './pages/PublicationsNewPage'; // New page for "Publications"
 import ProjectsNewPage from './pages/ProjectsNewPage'; // New page for "Projects"
 import FocusAreasNewPage from './pages/FocusAreasNewPage'; // New page for "Focus Areas"

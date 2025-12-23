@@ -3,29 +3,11 @@ import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import {
   BarChart, Search, Lightbulb, GraduationCap, Scale,
-  Activity, TrendingUp, Leaf, ChevronLeft, ChevronRight, ArrowRight
+  Activity, TrendingUp, Leaf, ChevronLeft, ChevronRight
 } from 'lucide-react';
 
 const HomePage: React.FC = () => {
   // --- Data Definitions ---
-  
-  const highlightedFocusAreas = [
-    { 
-        name: "Health & Wellbeing", 
-        icon: <Activity className="text-caser-gold" size={40} />, 
-        description: "Improving public health outcomes through data-driven policy recommendations." 
-    },
-    { 
-        name: "Economy & Labour", 
-        icon: <TrendingUp className="text-caser-gold" size={40} />, 
-        description: "Analyzing market trends to foster sustainable economic growth and employment." 
-    },
-    { 
-        name: "Climate & Environment", 
-        icon: <Leaf className="text-caser-gold" size={40} />, 
-        description: "Addressing climate challenges with actionable research on sustainability." 
-    },
-  ];
 
   const featuredProjects = [
     {

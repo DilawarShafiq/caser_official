@@ -23,7 +23,8 @@ caser_official/
 │   └── workflows/           # GitHub Actions workflows
 ├── .gitignore
 ├── README.md               # This file
-└── DEPLOYMENT_WORKFLOWS.md # Deployment documentation
+└── docs/
+    └── DEPLOYMENT.md       # Deployment documentation
 ```
 
 ## Frontend Development
@@ -68,7 +69,7 @@ The build will be available in the `frontend/dist/` directory.
 
 ## Deployment
 
-This project includes a GitHub Actions workflow for automated deployment to GitHub Pages. See [GITHUB_PAGES_DEPLOYMENT.md](./GITHUB_PAGES_DEPLOYMENT.md) for detailed information about how to configure and use the deployment workflow.
+This project includes a GitHub Actions workflow for automated deployment to GitHub Pages. See [docs/DEPLOYMENT.md](docs/DEPLOYMENT.md) for detailed information about how to configure and use the deployment workflow.
 
 The application will be automatically deployed to GitHub Pages when changes are pushed to the `main` branch.
 

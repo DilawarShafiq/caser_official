@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import {
   BarChart, Search, Lightbulb, GraduationCap, Scale,
-  Activity, TrendingUp, Leaf, ChevronLeft, ChevronRight
+  ChevronLeft, ChevronRight
 } from 'lucide-react';
 
 const HomePage: React.FC = () => {

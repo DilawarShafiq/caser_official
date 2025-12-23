@@ -29,6 +29,7 @@ import PublicationsNewPage from './pages/PublicationsNewPage'; // New page for "
 import ProjectsNewPage from './pages/ProjectsNewPage'; // New page for "Projects"
 import FocusAreasNewPage from './pages/FocusAreasNewPage'; // New page for "Focus Areas"
 import InsightsNewsPage from './pages/InsightsNewsPage'; // New page for "Insights News"
+import InsightsPage from './pages/InsightsPage';
 import InsightsArticlesPage from './pages/InsightsArticlesPage'; // New page for "Insights Articles"
 import InsightsStoriesPage from './pages/InsightsStoriesPage'; // New page for "Insights Stories"
 import ContactWriteTalkPage from './pages/ContactWriteTalkPage'; // New page for "Contact Write and talk to us"

@@ -38,17 +38,8 @@ import ContactJoinPartnerPage from './pages/ContactJoinPartnerPage'; // New page
 import ClimateResearchArticlePage from './pages/ClimateResearchArticlePage'; // New page for climate research article
 
 const App: React.FC = () => {
-  // Determine basename by checking the base tag that Vite sets during build
-  const getBaseName = (): string => {
-    const baseTag = document.querySelector('base');
-    if (baseTag && baseTag.getAttribute('href')) {
-      return baseTag.getAttribute('href') || '/';
-    }
-    return '/';
-  };
-
   return (
-    <Router basename={getBaseName()}>
+    <Router>
       <Layout>
         <Routes>
           <Route path="/" element={<HomePage />} />

@@ -208,3 +208,69 @@ Wait for consent; never auto-create ADRs. Group related decisions (stacks, authe
 
 ## Code Standards
 See `.specify/memory/constitution.md` for code quality, testing, performance, security, and architecture principles.
+
+---
+
+## Project-Specific: CASER Official Website
+
+### Tech Stack
+- **Framework:** React 19 with TypeScript
+- **Build Tool:** Vite 7
+- **Styling:** Tailwind CSS 4
+- **Routing:** React Router DOM 7
+- **Animation:** Framer Motion
+- **Icons:** Lucide React
+
+### Deployment
+- **Platform:** GitHub Pages
+- **URL:** https://dilawarshafiq.github.io/caser_official/
+- **CI/CD:** GitHub Actions (`.github/workflows/deploy.yml`)
+- **Branch:** Deploys from `main` to `gh-pages` branch
+
+### GitHub Pages Configuration (Important!)
+
+Since the site is deployed to a subdirectory (`/caser_official/`), these rules MUST be followed:
+
+1. **Router Basename:** Always use hardcoded basename in `App.tsx`:
+   ```tsx
+   <Router basename="/caser_official">
+   ```
+   Do NOT use dynamic detection from `<base>` tags - it doesn't work reliably.
+
+2. **Asset Paths:** Use `import.meta.env.BASE_URL` for static assets:
+   ```tsx
+   <img src={`${import.meta.env.BASE_URL}caser_logo.png`} />
+   ```
+
+3. **Navigation Links:** Always use React Router's `<Link>` component instead of `<a href>`:
+   ```tsx
+   // Correct
+   <Link to="/contact">Contact</Link>
+
+   // Wrong - won't respect basename
+   <a href="/contact">Contact</a>
+   ```
+
+4. **Vite Config:** The base path is set conditionally:
+   ```ts
+   base: process.env.GITHUB_PAGES ? '/caser_official/' : '/'
+   ```
+   GitHub Actions sets `GITHUB_PAGES=true` during build.
+
+5. **404 Handling:** The deploy workflow copies `index.html` to `404.html` for SPA routing.
+
+### Key Files
+- `frontend/src/App.tsx` - Main app with router configuration
+- `frontend/src/components/Header.tsx` - Navigation header
+- `frontend/src/components/Footer.tsx` - Site footer
+- `frontend/vite.config.ts` - Vite build configuration
+- `.github/workflows/deploy.yml` - GitHub Actions deployment
+
+### Common Issues & Solutions
+
+| Issue | Cause | Solution |
+|-------|-------|----------|
+| Navigation goes to wrong URL | Using `<a href>` instead of `<Link>` | Replace with `<Link to="...">` |
+| Logo/images not loading | Hardcoded `/path` instead of base-aware | Use `import.meta.env.BASE_URL` |
+| Page blank after deploy | Router basename not set correctly | Hardcode `basename="/caser_official"` |
+| 404 on direct URL access | GitHub Pages doesn't know about SPA routes | Ensure 404.html is created in deploy |

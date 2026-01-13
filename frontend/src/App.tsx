@@ -39,7 +39,7 @@ import ClimateResearchArticlePage from './pages/ClimateResearchArticlePage'; // 
 
 const App: React.FC = () => {
   return (
-    <Router basename="/caser_official/">
+    <Router basename="/caser_official">
       <Layout>
         <Routes>
           <Route path="/" element={<HomePage />} />

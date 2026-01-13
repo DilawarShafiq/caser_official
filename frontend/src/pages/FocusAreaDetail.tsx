@@ -1,5 +1,5 @@
 import React from 'react';
-import { useParams, Navigate } from 'react-router-dom';
+import { useParams, Navigate, Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { focusAreasData } from '../data/focusAreasData';
 import { ArrowRight, CheckCircle2 } from 'lucide-react';
@@ -140,9 +140,9 @@ const FocusAreaDetail: React.FC = () => {
                             </span>
                         </div>
                         <h3 className="text-2xl font-bold font-montserrat text-caser-navy mb-3">{project.title}</h3>
-                        <a href="/research" className="inline-flex items-center text-gray-500 hover:text-caser-gold font-semibold transition-colors mt-4">
+                        <Link to="/research" className="inline-flex items-center text-gray-500 hover:text-caser-gold font-semibold transition-colors mt-4">
                             View Case Study <ArrowRight size={18} className="ml-2" />
-                        </a>
+                        </Link>
                     </motion.div>
                 )) : (
                     <div className="col-span-2 text-center text-gray-500">Projects will be listed here soon.</div>

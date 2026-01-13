@@ -445,9 +445,9 @@ const HomePage: React.FC = () => {
                     <h3 className="text-2xl font-montserrat font-bold mb-4 text-[#FAF3E0]">{featuredProjects[currentProject].title}</h3>
                     <p className="text-gray-300 mb-4 font-open-sans text-lg">{featuredProjects[currentProject].summary}</p>
                     <p className="text-gray-300 mb-6 font-open-sans text-base">Author: Ayaz Haidar Naqvi</p>
-                    <a href="/research" className="inline-block bg-transparent border-2 border-[#FAF3E0] text-[#FAF3E0] px-6 py-2 rounded hover:bg-[#FAF3E0] hover:text-[#2B2B2B] transition-colors font-semibold w-fit">
+                    <Link to="/research" className="inline-block bg-transparent border-2 border-[#FAF3E0] text-[#FAF3E0] px-6 py-2 rounded hover:bg-[#FAF3E0] hover:text-[#2B2B2B] transition-colors font-semibold w-fit">
                         Read Report
-                    </a>
+                    </Link>
                 </div>
             </motion.div>
           </div>
@@ -497,7 +497,7 @@ const HomePage: React.FC = () => {
           <div className="container mx-auto px-4">
               <div className="flex justify-between items-center mb-8">
                 <h2 className="text-3xl font-montserrat font-bold text-[#E49B0F]">Latest Updates</h2>
-                <a href="/whats-up" className="text-[#E49B0F] font-semibold hover:underline">View All</a>
+                <Link to="/whats-up" className="text-[#E49B0F] font-semibold hover:underline">View All</Link>
               </div>
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -537,12 +537,12 @@ const HomePage: React.FC = () => {
             >
               Partner With Us
             </a>
-            <a
-              href="/contact"
+            <Link
+              to="/contact"
               className="px-8 py-3 border-2 border-[#FAF3E0] text-[#FAF3E0] font-montserrat font-semibold rounded-lg hover:bg-[#FAF3E0] hover:text-[#2B2B2B] transition-colors duration-300 shadow-lg"
             >
               Contact Us
-            </a>
+            </Link>
           </div>
         </div>
       </motion.section>

@@ -35,6 +35,7 @@ import InsightsStoriesPage from './pages/InsightsStoriesPage'; // New page for "
 import ContactWriteTalkPage from './pages/ContactWriteTalkPage'; // New page for "Contact Write and talk to us"
 import ContactJoinColleaguePage from './pages/ContactJoinColleaguePage'; // New page for "Contact Join as Colleague"
 import ContactJoinPartnerPage from './pages/ContactJoinPartnerPage'; // New page for "Contact Join as Partner"
+import ClimateResearchArticlePage from './pages/ClimateResearchArticlePage'; // New page for climate research article
 
 const App: React.FC = () => {
   return (
@@ -79,6 +80,7 @@ const App: React.FC = () => {
           <Route path="/contact/join-colleague" element={<ContactJoinColleaguePage />} />
           <Route path="/contact/join-partner" element={<ContactJoinPartnerPage />} />
           <Route path="/focus-areas" element={<FocusAreasNewPage />} />
+          <Route path="/climate-research-article" element={<ClimateResearchArticlePage />} />
           <Route path="/privacy" element={<PrivacyPolicyPage />} />
           <Route path="/terms" element={<TermsPage />} />
           <Route path="/cookies" element={<CookiePolicyPage />} />

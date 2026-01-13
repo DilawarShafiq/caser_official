@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import {
@@ -11,21 +11,9 @@ const HomePage: React.FC = () => {
 
   const featuredProjects = [
     {
-      title: "National Health Survey 2024",
-      category: "Health",
-      summary: "A comprehensive assessment of public health metrics across 30 districts.",
-      image: "https://placehold.co/600x400/1A365D/FFFFFF?text=Health+Survey"
-    },
-    {
-      title: "Economic Resilience Report",
-      category: "Economy",
-      summary: "Evaluating the impact of recent fiscal policies on small businesses.",
-      image: "https://placehold.co/600x400/00B5D4/FFFFFF?text=Economic+Report"
-    },
-    {
-      title: "Climate Adaptation Strategies",
-      category: "Environment",
-      summary: "Developing frameworks for rural communities to adapt to climate change.",
+      title: "Detecting Changing Climate",
+      category: "Climate Study",
+      summary: "Climate Change Detection in Pakistan Using Multistage Satellite Data",
       image: "https://placehold.co/600x400/ECC94B/1A365D?text=Climate+Study"
     }
   ];
@@ -58,21 +46,17 @@ const HomePage: React.FC = () => {
   ];
 
   // --- State for Carousel ---
-  const [currentProject, setCurrentProject] = useState(0);
+  const [currentProject] = useState(0);
 
   const nextProject = () => {
-    setCurrentProject((prev) => (prev + 1) % featuredProjects.length);
+    // Only one project, so no cycling
   };
 
   const prevProject = () => {
-    setCurrentProject((prev) => (prev - 1 + featuredProjects.length) % featuredProjects.length);
+    // Only one project, so no cycling
   };
-  
-  // Auto-advance carousel
-  useEffect(() => {
-    const timer = setInterval(nextProject, 5000);
-    return () => clearInterval(timer);
-  }, []);
+
+  // No auto-advance since there's only one slide
 
 
   const sectionVariants = {
@@ -426,8 +410,8 @@ const HomePage: React.FC = () => {
                 <p className="text-[#4A6FA5] mt-2">Latest insights from our team</p>
             </div>
 
-            {/* Carousel Controls */}
-            <div className="flex gap-2">
+            {/* Carousel Controls - Hidden since there's only one slide */}
+            <div className="hidden">
                 <button onClick={prevProject} className="p-2 rounded-full border border-[#2B2B2B] hover:bg-[#4A6FA5] hover:border-[#4A6FA5] hover:text-[#FAF3E0] transition-all">
                     <ChevronLeft size={24} />
                 </button>
@@ -459,7 +443,8 @@ const HomePage: React.FC = () => {
                 </div>
                 <div className="md:w-1/2 p-8 flex flex-col justify-center">
                     <h3 className="text-2xl font-montserrat font-bold mb-4 text-[#FAF3E0]">{featuredProjects[currentProject].title}</h3>
-                    <p className="text-gray-300 mb-6 font-open-sans text-lg">{featuredProjects[currentProject].summary}</p>
+                    <p className="text-gray-300 mb-4 font-open-sans text-lg">{featuredProjects[currentProject].summary}</p>
+                    <p className="text-gray-300 mb-6 font-open-sans text-base">Author: Ayaz Haidar Naqvi</p>
                     <a href="/research" className="inline-block bg-transparent border-2 border-[#FAF3E0] text-[#FAF3E0] px-6 py-2 rounded hover:bg-[#FAF3E0] hover:text-[#2B2B2B] transition-colors font-semibold w-fit">
                         Read Report
                     </a>
@@ -516,28 +501,17 @@ const HomePage: React.FC = () => {
               </div>
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                  {/* Update Card 1 */}
-                  <div className="flex gap-4 items-start">
-                      <div className="w-24 h-24 bg-gray-200 rounded-lg flex-shrink-0"></div>
+                  {/* Climate Research Article */}
+                  <Link to="/climate-research-article" className="flex gap-4 items-start">
+                      <div className="w-24 h-24 bg-gray-200 rounded-lg flex-shrink-0 border-2 border-dashed"></div>
                       <div>
-                          <span className="text-xs font-bold text-[#4A6FA5] uppercase">News</span>
+                          <span className="text-xs font-bold text-[#E49B0F] uppercase">Article</span>
                           <h3 className="text-lg font-bold text-[#2B2B2B] leading-tight mt-1 mb-2 hover:text-[#E49B0F] cursor-pointer transition-colors">
-                              CASER Launches New Initiative for Urban Development
+                              Pakistan's Climate Clock: A 60-Year Deep Dive into a Warming Nation
                           </h3>
-                          <p className="text-sm text-gray-500">December 10, 2025</p>
+                          <p className="text-sm text-gray-500">By Ayaz Haider Naqvi</p>
                       </div>
-                  </div>
-                   {/* Update Card 2 */}
-                   <div className="flex gap-4 items-start">
-                      <div className="w-24 h-24 bg-gray-200 rounded-lg flex-shrink-0"></div>
-                      <div>
-                          <span className="text-xs font-bold text-[#E49B0F] uppercase">Event</span>
-                          <h3 className="text-lg font-bold text-[#2B2B2B] leading-tight mt-1 mb-2 hover:text-[#E49B0F] cursor-pointer transition-colors">
-                              Upcoming Webinar: The Future of Digital Economy in South Asia
-                          </h3>
-                          <p className="text-sm text-gray-500">January 15, 2026</p>
-                      </div>
-                  </div>
+                  </Link>
               </div>
           </div>
       </section>

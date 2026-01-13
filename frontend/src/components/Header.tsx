@@ -51,9 +51,14 @@ const Header: React.FC = () => {
         {/* Logo */}
         <div className="flex items-center gap-3">
           <Link to="/" className="flex items-center">
-            <img src="/caser_official/caser_logo.png" alt="CASER Logo" className="h-12" />
+            <img
+              src="/caser_official/caser_logo.png"
+              alt="CASER Logo"
+              className="h-12"
+              style={{ transform: 'scaleX(1.1)' }}
+            />
           </Link>
-          <span className="hidden lg:block font-montserrat font-bold text-lg text-transparent bg-clip-text bg-gradient-to-r from-[#E49B0F] via-[#FAF3E0] to-[#E49B0F]">
+          <span className="hidden lg:block font-montserrat font-bold text-lg text-white">
             Center for Advanced Survey and Economic Research
           </span>
         </div>

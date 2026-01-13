@@ -52,7 +52,7 @@ const Header: React.FC = () => {
         <div className="flex items-center gap-3">
           <Link to="/" className="flex items-center">
             <img
-              src="/caser_official/caser_logo.png"
+              src="/caser_logo.png"
               alt="CASER Logo"
               className="h-12"
               style={{ transform: 'scaleX(1.1)' }}
